@@ -1,0 +1,17 @@
+services:
+  sitecore-genai-gateway:
+    container_name: sitecore_genai_gateway
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "6010:6010"
+    environment:
+      - PORT=6010
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    volumes:
+      - .:/app
+      - /app/node_modules
