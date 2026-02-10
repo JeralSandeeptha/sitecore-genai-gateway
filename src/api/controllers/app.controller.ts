@@ -6,12 +6,12 @@ import { RequestHandler } from "express";
 
 const getApplication: RequestHandler = (_req, res) => {
     try {
-        logger.info("Welcome to GenAI Backend API");
+        logger.info("Welcome to Gateway Service API");
         res.status(HTTP_STATUS.OK).json(
             new SuccessResponse(
                 HTTP_STATUS.OK,
-                "GenAI Backend API checking query was success",
-                "GenAI Backend API checking query was success"
+                "Gateway Service API checking query was success",
+                "Gateway Service API checking query was success"
             )
         );
     } catch (error: any) {
@@ -19,7 +19,7 @@ const getApplication: RequestHandler = (_req, res) => {
         res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json(
             new ErrorResponse(
                 HTTP_STATUS.INTERNAL_SERVER_ERROR,
-                "GenAI Backend API checking query was failed",
+                "Gateway Service API checking query was failed",
                 error
             )
         );
