@@ -12,4 +12,5 @@ export const envConfig = {
     AI_SERVICE_URL: process.env.AI_SERVICE_URL,
     USER_SERVICE_URL: process.env.USER_SERVICE_URL,
     KNOWLEDGE_SERVICE_URL: process.env.KNOWLEDGE_SERVICE_URL,
+    CODE_GEN_SERVICE_URL: process.env.CODE_GEN_SERVICE_URL,
 };
